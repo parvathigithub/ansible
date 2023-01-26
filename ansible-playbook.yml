@@ -81,7 +81,9 @@
 - name: Play 5 - Start Tomcat Servers
   hosts: webservers
   become: yes
-  become_user: tar
+  become_user: root
+  vars:
+       https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.71/bin/apache-tomcat-9.0.71.tar.gz
   tasks:
     - name: start tomcat
       command: nohup sh /etc/tomcat/bin/startup.sh
