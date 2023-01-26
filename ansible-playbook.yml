@@ -81,7 +81,7 @@
 - name: Play 5 - Start Tomcat Servers
   hosts: webservers
   become: yes
-  become_user: root
+  become_user: tar
   tasks:
     - name: start tomcat
       command: nohup sh /etc/tomcat/bin/startup.sh
